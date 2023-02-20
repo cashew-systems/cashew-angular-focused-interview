@@ -1,0 +1,20 @@
+<section>
+  <div>
+    term: {{ term.term }}
+  </div>
+  <ng-container *ngIf="!review; else reviewTemplate">
+    <input type="text" #definition name="definition" placeholder="Enter definition" />
+    <button (click)="checkDefinition(definition.value)">Check</button>
+    <ng-container *ngIf="attempted">
+      <ng-container *ngIf="correct else wrong">
+        <div>Correct!</div>
+      </ng-container>
+      <ng-template #wrong>
+        <div class="wrong">Wrong!</div>
+      </ng-template>
+    </ng-container>
+  </ng-container>
+  <ng-template #reviewTemplate>
+    definition: {{term.definition}}
+  </ng-template>
+</section>

@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'angular-client';
+export class AppComponent{
+  title = 'ben angular-client';
+
+  constructor(){}
 }

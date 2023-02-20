@@ -1,0 +1,8 @@
+<div>
+  <ng-container *ngFor="let t of terms; index as i">
+    <app-term-card [hidden]="i != viewing && !completed" [term]="t" (score)="calcScore($event)"></app-term-card>
+  </ng-container>
+</div>
+<div>
+  <div>Score: {{ myScore }} / {{ terms.length }}</div>
+</div>

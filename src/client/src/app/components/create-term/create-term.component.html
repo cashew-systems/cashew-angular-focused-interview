@@ -1,0 +1,5 @@
+<section>
+  <input type="text" #term name="term" placeholder="Enter Term" />
+  <input type="text" #definition name="definition" placeholder="Enter Definition" />
+  <button (click)="save(term.value, definition.value)">Save</button>
+</section>
